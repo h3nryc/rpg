@@ -75,22 +75,22 @@ noLoop();
 
 
 function keyPressed() {
-  if (keyCode === 87) {
+  if (keyCode === 87 || keyCode === 38) {
     if(map[player.x][player.y-1].canStep == true || map[player.x][player.y-1].canStep == undefined){
       player.y = player.y - 1;
       draw();
     }
-  } else if (keyCode === 65) {
+  } else if (keyCode === 65 || keyCode == 37) {
     if(map[player.x-1][player.y].canStep == true || map[player.x-1][player.y].canStep == undefined){
       player.x = player.x - 1;
       draw();
     }
-  } else if (keyCode === 83) {
+  } else if (keyCode === 83 || keyCode === 40) {
       if(map[player.x][player.y+1].canStep == true || map[player.x][player.y+1].canStep == undefined){
         player.y = player.y + 1;
         draw();
       }
-    }else if (keyCode === 68) {
+    }else if (keyCode === 68 || keyCode === 39) {
       if(map[player.x+1][player.y].canStep == true || map[player.x+1][player.y].canStep == undefined){
         player.x = player.x + 1;
         draw();
