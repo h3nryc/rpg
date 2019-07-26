@@ -11,5 +11,5 @@ function Player(x,y) {
     fill(c);
     square(this.x*25, this.y*25, 25);
   };
-  
+
 }

@@ -46,6 +46,7 @@ function draw() {
       cSquare = map[x][y]
       let c;
       noStroke();
+      
       switch(cSquare.type) {
         case 'ocean':
       //  image(ocean, x*25, y*25, 25,25);
