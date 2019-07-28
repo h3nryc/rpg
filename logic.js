@@ -7,46 +7,19 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
-
+  createCanvas(250, 250);
   player = new Player();
-
-   map = [
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'goal'},{type: 'dirt', canStep: true}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'dirt'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
-    [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'goal'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}]
-  ];
+  mapGen = new MapGen();
 
 }
 
 function draw() {
-  for (var x = 0; x < 24; x++) {
-    for (var y = 0; y < 24; y++) {
-      cSquare = map[x][y]
+  map = mapGen.createLevel();
+  for (var x = 0; x < 10; x++) {
+    for (var y = 0; y < 10; y++) {
+      cSquare = map[x+player.cX][y+player.cY]
       let c;
       noStroke();
-      
       switch(cSquare.type) {
         case 'ocean':
       //  image(ocean, x*25, y*25, 25,25);
@@ -78,22 +51,40 @@ noLoop();
 function keyPressed() {
   if (keyCode === 87 || keyCode === 38) {
     if(map[player.x][player.y-1].canStep == true || map[player.x][player.y-1].canStep == undefined){
-      player.y = player.y - 1;
+      if (player.cY-1<= 0) {
+        player.cY = 0;
+      }else {
+        player.cY = player.cY - 1;
+      }
       draw();
     }
   } else if (keyCode === 65 || keyCode == 37) {
     if(map[player.x-1][player.y].canStep == true || map[player.x-1][player.y].canStep == undefined){
-      player.x = player.x - 1;
+      console.log(player.x);
+      if (player.cX-1<= 0) {
+        player.cX = 0;
+      }else {
+        player.cX = player.cX - 1;
+      }
       draw();
     }
   } else if (keyCode === 83 || keyCode === 40) {
+          console.log(player.cY+1);
       if(map[player.x][player.y+1].canStep == true || map[player.x][player.y+1].canStep == undefined){
-        player.y = player.y + 1;
+        if (player.cY+1 >= 14) {
+          player.cY = 14;
+        }else {
+          player.cY = player.cY + 1;
+        }
         draw();
       }
     }else if (keyCode === 68 || keyCode === 39) {
       if(map[player.x+1][player.y].canStep == true || map[player.x+1][player.y].canStep == undefined){
-        player.x = player.x + 1;
+        if (player.cX+1 >= 14) {
+          player.cX = 14;
+        }else {
+          player.cX = player.cX + 1;
+        }
         draw();
       }
   }
