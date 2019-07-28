@@ -60,7 +60,6 @@ function keyPressed() {
     }
   } else if (keyCode === 65 || keyCode == 37) {
     if(map[player.x-1][player.y].canStep == true || map[player.x-1][player.y].canStep == undefined){
-      console.log(player.x);
       if (player.cX-1<= 0) {
         player.cX = 0;
       }else {
@@ -69,7 +68,6 @@ function keyPressed() {
       draw();
     }
   } else if (keyCode === 83 || keyCode === 40) {
-          console.log(player.cY+1);
       if(map[player.x][player.y+1].canStep == true || map[player.x][player.y+1].canStep == undefined){
         if (player.cY+1 >= 14) {
           player.cY = 14;
