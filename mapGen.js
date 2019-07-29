@@ -2,7 +2,7 @@ function MapGen() {
   this.cMap = [];
 
   this.createLevel = function (diffuclty,type) {
-    return    map = [
+    return map = [
         [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
         [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],
         [{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'ocean', canStep: false}, {type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'},{type: 'grass'}],

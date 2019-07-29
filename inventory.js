@@ -4,6 +4,11 @@ function Inventory(){
 	this.add = function(item){
 		this.items.push(item);
 		currentText = $('.inventory').text();
-		$('.inventory').text(currentText + item);
+		console.log(currentText);
+		if (currentText == 'Inventory: ') {
+			$('.inventory').text('Inventory: '+item.name)
+		}else{
+			$('.inventory').text(currentText +', '+ item.name);
+		}
 	}
 }
