@@ -55,7 +55,7 @@ noLoop();
 function keyPressed() {
   if (keyCode === 87 || keyCode === 38) {
     if(map[player.x][player.y-1].canStep == true || map[player.x][player.y-1].canStep == undefined){
-      if (player.cY-1<= 0) {
+      if (player.cY<= 0) {
         player.cY = 0;
       }else {
         player.cY = player.cY - 1;
