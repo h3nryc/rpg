@@ -9,6 +9,7 @@ function preload() {
 function setup() {
   createCanvas(600, 600);
 
+  inventory = new Inventory();
   player = new Player();
 
    map = [
@@ -41,6 +42,7 @@ function setup() {
 }
 
 function draw() {
+  inventory.add("item");
   for (var x = 0; x < 24; x++) {
     for (var y = 0; y < 24; y++) {
       cSquare = map[x][y]
