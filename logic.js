@@ -28,15 +28,19 @@ function draw() {
         case 'grass':
           //image(grass, x*25, y*25, 25,25);
           image(img,[sx=x*25],[sy=y*25],[sWidth=25],[sHeight=25],[dx=0],[dy=32],[30],[30])
-
       break;
       case 'dirt':
       image(dirt, x*25, y*25, 25,25);
         break;
       case 'goal':
-      c = color('rgb(241, 196, 15)')
+      c = color('rgb(241, 196, 15)');
       fill(c);
       square(x*25, y*25, 25);
+      case undefined:
+      console.log(1);
+      c = color('rgb(0, 0, 0)');
+      fill(c)
+      break;
       default:
       }
     }

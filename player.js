@@ -13,7 +13,7 @@ function Player(x,y) {
     noStroke();
     c = color('rgb(255,255,255)');
     fill(c);
-    square(5*25, 5*25, 25);
+    square(5*25+5, 5*25+5, 15);
   };
 
 }
