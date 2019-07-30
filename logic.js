@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(250, 250);
+  createCanvas(275, 275);
   player = new Player();
   mapGen = new MapGen();
   entityHandler = new EntityHandler();
@@ -17,8 +17,8 @@ function setup() {
 
 function draw() {
   map = mapGen.createLevel();
-  for (var x = 0; x < 10; x++) {
-    for (var y = 0; y < 10; y++) {
+  for (var x = 0; x < 11; x++) {
+    for (var y = 0; y < 11; y++) {
 
       var cSquare = map[x+player.cX][y+player.cY];
       var entityInfo = entityHandler.checkPlacement(x+player.cX,y+player.cY);
