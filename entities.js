@@ -1,5 +1,5 @@
 function EntityHandler() {
-  this.dic = [{id:0, name: "Potion of Healing", attribute: "health",byAmount:100}];
+  this.dic = [{id:0, name: "Potion of Healing", attribute: "health",byAmount:100,class:"potion-healing"}];
   this.places = [[8,8,0],[12,13,0]];
 
   this.pickUp = function(x,y,type){

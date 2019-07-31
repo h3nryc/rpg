@@ -16,4 +16,7 @@ function Player(x,y) {
     square(5*25+5, 5*25+5, 15);
   };
 
+  this.drawStats = function() {
+    
+  }
 }

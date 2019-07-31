@@ -4,11 +4,12 @@ function Inventory(){
 	this.add = function(item){
 		this.items.push(item);
 		currentText = $('.inventory').text();
-		console.log(currentText);
-		if (currentText == 'Inventory: ') {
-			$('.inventory').text('Inventory: '+item.name)
+		console.log(this.items);
+		var slotNum = this.items.length;
+		if (slotNum < 9) {
+			$( ".slot" ).eq( slotNum-1 ).addClass(item.class)
 		}else{
-			$('.inventory').text(currentText +', '+ item.name);
+			$( ".slot" ).eq( 8 ).addClass(item.class)
 		}
 	}
 }
