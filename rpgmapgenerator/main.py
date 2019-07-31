@@ -12,6 +12,10 @@ with open("map.txt") as f:
 		 		square += '{type: \'ocean\', canStep: false}'
 		 	elif tile == "d":
 		 		square += '{type: \'dirt\'}'
+		 	elif tile == "g":
+		 		square += '{type: \'grass\'}'
+		 	elif tile == "x":
+		 		square += '{type: \'goal\'}'
 		 	map[x].append(square)
 	print(str(map).replace('"', '').replace("],","],\n"))
 
