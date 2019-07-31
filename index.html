@@ -13,10 +13,21 @@
   <span class="cont" id="">
     <span class="stats">
       <p>Stats</p>
+
+      <ul>
+        <li>Health - <div class="prog-bar-outer"><div class="prog-bar-inner">100</div></div></li>
+        <li>Speed - <div class="prog-bar-outer"><div class="prog-bar-inner">100</div></div></li>
+        <li>Strength - <div class="prog-bar-outer"><div class="prog-bar-inner">100</div></div></li>
+        <li>Mana - <div class="prog-bar-outer"><div class="prog-bar-inner">100</div></div></li>
+        <li>Skill - <div class="prog-bar-outer"><div class="prog-bar-inner">100</div></div></li>
+      </ul>
+
+      <p>You are a Warrior</p>
+      <a href="#">Click here to change class (Will reset progress)</a>
     </span>
     <div id="parent"></div>
 
-    
+
     <span class="inventory">
       <p>Inventory</p>
       <div class="grid">
@@ -60,6 +71,11 @@
       </div>
     </span>
   </span>
+
+  <div class="bottom">
+
+  </div>
+
 </div>
     <style media="screen">
     .grid {
@@ -80,6 +96,9 @@
 .grid span{
   margin-left: 3px;
   margin-top: 3px;
+}
+a:hover{
+  color: blue;
 }
     *{
       font-family: sans-serif;
@@ -124,6 +143,39 @@
         background-position: right top;
         background-size: contain;
         background-image: url('./assets/Potion_of_Healing.png');
+      }
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        margin-left: 12px;
+      }
+      li{
+        margin-top: 5px;
+      }
+      .prog-bar-outer{
+        height: 15px;
+        width: 150px;
+        border: 1px #c0392b solid;
+        border-radius: 5px;
+        display: inline-block;
+        text-align: center;
+        font-size: 10pt;
+      }
+      .prog-bar-inner{
+        width: 100%;
+        background-color: #c0392b;
+        height: 15px;
+      }
+      .bottom{
+        width: 770px;
+        height: 150px;
+        border: #363636 5px solid;
+        border-top: none;
+        background-color: #5c5c5c;
+        position: relative;
+        top: 260px;
       }
     </style>
   </body>
