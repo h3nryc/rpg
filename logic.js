@@ -7,7 +7,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(250, 250);
+  var cnv = createCanvas(250, 250);
+  cnv.parent('parent');
   player = new Player();
   mapGen = new MapGen();
   entityHandler = new EntityHandler();
@@ -93,8 +94,8 @@ function keyPressed() {
         if(entityInfo[0]){
           entityHandler.pickUp(player.x,player.y+1,entityInfo[1])
         }
-        if (player.cY+1 >= 14) {
-          player.cY = 14;
+        if (player.cY+1 >= 30) {
+          player.cY = 30;
         }else {
           player.cY = player.cY + 1;
         }
@@ -106,8 +107,8 @@ function keyPressed() {
         if(entityInfo[0]){
           entityHandler.pickUp(player.x+1,player.y,entityInfo[1])
         }
-        if (player.cX+1 >= 14) {
-          player.cX = 14;
+        if (player.cX+1 >= 30) {
+          player.cX = 30;
         }else {
           player.cX = player.cX + 1;
         }

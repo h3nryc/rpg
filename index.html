@@ -9,25 +9,51 @@
     <script src="./entities.js"></script>
   </head>
   <body>
-    <div class="inven-div">
-    <p class='inventory'>Inventory: </p>
-    </div>
+<div class="center">
+  <span class="cont" id="">
+    <span class="stats">
+      <p>Stats</p>
+    </span>
+    <div id="parent">
 
+    </div>
+    <span class="inventory">
+      <p>Inventory</p>
+    </span>
+  </span>
+</div>
     <style media="screen">
+    *{
+      font-family: sans-serif;
+      color: white;
+    }
       .p5Canvas{
-        border: 10px gold solid;
+        border: 5px gold solid;
         margin: 0;
-        position: fixed;
+        float: left;
       }
-      .inven-div{
-        float: right;
+      .center{
+        width: 100%;
+        text-align: center;
+        margin-left: 20%;
+      }
+      .cont{
+ text-align: center;
+      }
+      .stats{
+        float: left;
+        clear: both;
+        width: 250px;
         height: 250px;
-        width: 150px;
-        color: white;
-        display: inline-block;
-        border: 10px #424242 solid;
-        background-color: #353535;
-        margin-right: 984px;
+        border: #363636 5px solid;
+        background-color: #5c5c5c;
+      }
+      .inventory{
+        float: left;
+        width: 250px;
+        height: 250px;
+        border: #363636 5px solid;
+        background-color: #5c5c5c;
       }
     </style>
   </body>
