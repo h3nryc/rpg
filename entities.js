@@ -1,6 +1,6 @@
 function EntityHandler() {
   this.dic = [{id:0, name: "Potion of Healing", attribute: 0,byAmount:30,class:"potion-healing"}];
-  this.places = [[8,8,0],[12,13,0]];
+  this.places = [[8,8,0],[12,13,0],[9,10,0]];
 
   this.pickUp = function(x,y,type){
     for (var i = 0; i < this.places.length; i++) {
