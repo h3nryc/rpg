@@ -18,6 +18,7 @@ function setup() {
 
 function draw() {
   map = mapGen.createLevel();
+  player.drawStats();
   for (var x = 0; x < 10; x++) {
     for (var y = 0; y < 10; y++) {
 
