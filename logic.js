@@ -123,5 +123,8 @@ function keyPressed() {
         }
         draw();
       }
-  }
+    }else if (49 <= keyCode <= 57) {
+      var invenSlot = keyCode - 49;
+      inventory.use(invenSlot);
+    }
 }
