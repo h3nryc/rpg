@@ -16,8 +16,10 @@ function Inventory(){
 
 	this.emptyItems = function(){
 		for (var id = 0; id < this.items.length; id++) {
-			$( ".slot" ).eq( id ).removeClass(this.items[id].class)
-			$( ".slot" ).eq( id ).attr('title', "");
+			for (var i = 0; i < 8; i++) {
+				$( ".slot" ).eq( i ).removeClass(this.items[id].class)
+				$( ".slot" ).eq( i ).attr('title', "");
+				}
 		}
 		this.drawItems();
 	}
