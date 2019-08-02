@@ -47,10 +47,18 @@ function draw() {
       }
 
       if (entityInfo[0]) {
-        noStroke();
-        entity = color('rgb(255,0,0)');
-        fill(entity);
-        square(x*25+5, y*25+5, 15);
+        console.log(entityInfo);
+        if (entityInfo[1] == 0) {
+          noStroke();
+          entity = color('rgb(255,0,0)');
+          fill(entity);
+          square(x*25+5, y*25+5, 15);
+        }else if(entityInfo[1] == 1){
+          noStroke();
+          entity = color('rgb(0,0,255)');
+          fill(entity);
+          square(x*25+5, y*25+5, 15);
+        }
       }
 
     }
