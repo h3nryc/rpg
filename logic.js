@@ -13,6 +13,7 @@ function setup() {
   mapGen = new MapGen();
   entityHandler = new EntityHandler();
   inventory = new Inventory();
+  fightHandler = new FightHandler();
 
 }
 
@@ -47,7 +48,6 @@ function draw() {
       }
 
       if (entityInfo[0]) {
-        console.log(entityInfo);
         if (entityInfo[1] == 0) {
           noStroke();
           entity = color('rgb(255,0,0)');
@@ -71,6 +71,7 @@ noLoop();
 
 
 function keyPressed() {
+if (fightHandler.fight == false) {
   if (keyCode === 87 || keyCode === 38) {
     if(map[player.x][player.y-1].canStep == true || map[player.x][player.y-1].canStep == undefined){
       var entityInfo = entityHandler.checkPlacement(player.x,player.y-1);
@@ -127,4 +128,5 @@ function keyPressed() {
       var invenSlot = keyCode - 49;
       inventory.use(invenSlot);
     }
+}
 }
