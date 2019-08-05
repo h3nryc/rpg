@@ -4,7 +4,7 @@ with open("map.txt") as f:
 	lines = f.read().split("\n")
 	for i in range(len(lines[0])):
 		map.append([])
-	for y in range(len(lines)):
+	for y in range(len(lines)-1):
 		for x in range(len(lines[0])):
 			tile = lines[x][y]
 			square = str()
