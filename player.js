@@ -1,6 +1,6 @@
 function Player(x,y) {
   this.level = 1;
-  this.attr = [10,50,50,50,50];
+  this.attr = [100,50,50,50,50];
   this.cX = 0;
   this.cY = 0;
   this.x = 0;

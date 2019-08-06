@@ -70,17 +70,20 @@
       </div>
     </span>
   </span>
-
   <div class="bottom">
-    <div class="fight-buts">
-<span ><div class="fight-but"></div><div class="fight-but"></div></span>
-      <div class="fight-but"></div>
-      <div class="fight-but"></div>
-        <div class="mob-health-outer">
-          <div class="mob-health-inner"></div>
-        </div>
+    <div class="contr">
+      <div class="fight-buts">
+        <div onclick="fightHandler.playerMove(0)" class="but">Large Hit</div>
+        <div onclick="fightHandler.playerMove(1)" class="but">Medium Hit</div>
+        <div onclick="fightHandler.playerMove(2)" class="but">Small Hit</div>
+        <div onclick="fightHandler.playerMove(3)" class="but">Defend</div>
+        <div onclick="fightHandler.playerMove(4)" class="but">Steal Health</div>
+        <div onclick="fightHandler.playerMove(5)" class="but">Flee</div>
+      </div>
+      <div class="mob-health-outer">
+        <div class="mob-health-inner"></div>
+      </div>
     </div>
-  </div>
 </div>
   </body>
 </html>
