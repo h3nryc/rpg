@@ -4,6 +4,7 @@ function FightHandler() {
   this.cMobH = 0;
   this.cMobS = 0;
   this.cMobD = 0;
+  this.coolDown = 0;
 
   this.battle = function(mob){
     this.fight = true;
@@ -30,7 +31,7 @@ function FightHandler() {
           this.cMobH = this.cMobH - pStat;
           if(this.cMobH <= 0){this.endFight();alert('You Win!')}
           $( ".mob-health-inner" ).css("width", this.cMobH+'%');
-          mobAi(1)
+          mobAi(this.cMobD)
         }else{
           var rand = Math.floor(Math.random() * 5) + 1
           if (rand == 1) {
@@ -41,7 +42,7 @@ function FightHandler() {
           }
         }
       }else{
-        mobAi(1)
+        mobAi(this.cMobD)
         var pStat = playerAttack(move);
         if (pStat != true) {
           this.cMobH = this.cMobH - pStat
@@ -69,10 +70,10 @@ function playerAttack(move) {
 
   switch(move) {
     case 0:
-    var rand = Math.floor(Math.random() * 3) + 1;
+    var rand = Math.floor(Math.random() * 2) + 1;
     console.log(rand);
     if (rand == 1) {
-      return (player.attr[2]/10) +20;
+      return (player.attr[2]/5) +20;
     }else{
       return 0;
     }
@@ -84,15 +85,16 @@ function playerAttack(move) {
     }else{
       return 0;
     }
-
     break;
     case 2:
-    return 15;
+    return 20;
     break;
     case 3:
     return true;
     break;
     case 4:
+    //steal health
+    console.log(Date.now());
     return 20;
     break;
     case 5:
