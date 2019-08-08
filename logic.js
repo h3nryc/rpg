@@ -59,6 +59,12 @@ function draw() {
           fill(entity);
           square(x*25+5, y*25+5, 15);
         }
+        if (entityInfo[1] == 100){
+          noStroke();
+          entity = color('rgb(0,255,0)')
+          fill(entity);
+          square(x*25+5, y*25+5, 15)
+        }
       }
 
     }
