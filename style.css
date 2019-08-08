@@ -167,6 +167,7 @@ color: blue;
     height: 100%;
     margin: auto;
     color: black;
+    display: none;
   }
 
   .select{
@@ -192,7 +193,7 @@ color: blue;
   .icon:hover{
     background-color: pink;
   }
-  
+
   .icon li{
     margin: 0;
         color: black;

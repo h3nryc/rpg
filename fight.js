@@ -75,7 +75,7 @@ function playerAttack(move) {
     var rand = Math.floor(Math.random() * 2) + 1;
     console.log(rand);
     if (rand == 1) {
-      return (player.attr[2]/5) +20;
+      return (player.attr[2]/5) +20 + (player.attr[2]/10);
     }else{
       return 0;
     }
@@ -83,13 +83,13 @@ function playerAttack(move) {
     case 1:
     var rand = Math.floor(Math.random() * 2) + 1;
     if (rand == 1) {
-      return (player.attr[2]/13) +15;
+      return (player.attr[2]/13) +15 +(player.attr[2]/10);
     }else{
       return 0;
     }
     break;
     case 2:
-    return 20;
+    return 20 + (player.attr[2]/10);
     break;
     case 3:
     return true;

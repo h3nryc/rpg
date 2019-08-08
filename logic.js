@@ -12,6 +12,7 @@ function setup() {
   player = new Player();
   mapGen = new MapGen();
   entityHandler = new EntityHandler();
+  classHandler = new Classes();
   inventory = new Inventory();
   fightHandler = new FightHandler();
 

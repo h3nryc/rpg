@@ -8,6 +8,7 @@
     <script src="./mapGen.js"></script>
     <script src="./entities.js"></script>
     <script src="./fight.js"></script>
+    <script src="./class.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -25,7 +26,7 @@
       </ul>
 
       <p>You are a Warrior</p>
-      <a href="#">Click here to change class (Will reset progress)</a>
+      <a onclick="$('.class-out').show(); fightHandler.fight = true;" href="#">Click here to change class (Will reset progress)</a>
     </span>
 
     <div id="parent"></div>
@@ -89,12 +90,13 @@
 
     <div class="class-out">
       <div class="select">
-        <div class="icon">Warrior <ol><li>An all rounder</li></ol></div>
-        <div class="icon">Mage <ol><li>Magic man</li></ol></div>
-        <div class="icon">Speedster <ol><li>Fast like the flash but faster</li></ol></div>
-        <div class="icon">Heavy <ol><li>"ME VERY STRONG"</li></ol></div>
-        <div class="icon">Mr Howse <ol><li>....</li></ol></div>
+        <div onclick="classHandler.changeClass('warrior')" class="icon">Warrior <ol><li>An all rounder</li></ol></div>
+        <div onclick="classHandler.changeClass('mage')" class="icon">Mage <ol><li>Magic man</li></ol></div>
+        <div onclick="classHandler.changeClass('speedster')" class="icon">Speedster <ol><li>Fast like the flash but faster</li></ol></div>
+        <div onclick="classHandler.changeClass('heavy')" class="icon">Heavy <ol><li>"ME VERY STRONG"</li></ol></div>
+        <div onclick="classHandler.changeClass('howse')" class="icon">Mr Howse <ol><li>....</li></ol></div>
       </div>
+      <a href="#" onclick="$('.class-out').hide(); fightHandler.fight = false;">Confirm?<a>
     </div>
 </div>
   </body>
