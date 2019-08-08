@@ -149,3 +149,7 @@ color: blue;
     margin: auto;
     display: none;
   }
+
+  .tool-tip{
+    display: none;
+  }

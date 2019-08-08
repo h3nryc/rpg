@@ -3,6 +3,7 @@ function EntityHandler() {
 {id:1, name: "Potion of Speed", attribute: 1,byAmount:25,class:"potion-speed"}
   ];
   this.places = [[8,8,0],[12,13,0],[9,10,0],[10,10,1]];
+  this.mobPlaces = [[5,5,100,30,1]];
 
   this.pickUp = function(x,y,type){
     for (var i = 0; i < this.places.length; i++) {

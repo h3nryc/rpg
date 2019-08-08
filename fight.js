@@ -12,6 +12,7 @@ function FightHandler() {
     this.cMobS = mob[1];
     this.cMobD = mob[2];
     $('.contr').show();
+    $('.tool-tip').show();
     $( ".mob-health-inner" ).css("width", this.cMobH+'%');
   }
 
@@ -21,6 +22,7 @@ function FightHandler() {
     this.cMobS = 0;
     this.cMobD = 0;
     $('.contr').hide();
+    $('.tool-tip').hide();
   }
 
   this.playerMove = function(move){
@@ -94,10 +96,17 @@ function playerAttack(move) {
     break;
     case 4:
     //steal health
-    console.log(Date.now());
     return 20;
     break;
     case 5:
+    var rand = Math.floor(Math.random() * 2) + 1;
+    if (rand == 1) {
+      alert('Escaped!')
+      fightHandler.endFight();
+    }else{
+      alert('Could not escape...')
+      return;
+    }
     break;
   default:
   }
