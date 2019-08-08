@@ -42,8 +42,11 @@ function Inventory(){
 	}
 
 	this.use = function(id){
-		console.log(this.items[0]);
-		player.updateStat(this.items[id].attribute,true,this.items[id].byAmount)
-		this.remove(id)
+		if ((player.attr[this.items[id].attribute] + this.items[id].byAmount) <= 100) {
+			player.updateStat(this.items[id].attribute,true,this.items[id].byAmount)
+			this.remove(id)
+		}else{
+			alert('You can\'t use that now.')
+		}
 	}
 }
