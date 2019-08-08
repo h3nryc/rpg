@@ -153,3 +153,54 @@ color: blue;
   .tool-tip{
     display: none;
   }
+
+  .popup{
+    height: 400px;
+    width: 400px;
+    background-color: red;
+    float: left;
+    z-index: 999;
+  }
+
+  .class-out{
+    width: 600px;
+    height: 100%;
+    margin: auto;
+    color: black;
+  }
+
+  .select{
+    height: 70%;
+    margin-left: 30px;
+    text-align: center;
+    color: black;
+  }
+
+  .icon{
+    color: black;
+    text-align: center;
+    width: 80px;
+    height: 120px;
+    border: #363636 2px solid;
+    margin-left: 20px;
+    margin-top: 5px;
+    display: inline-block;
+    float: left;
+    background-color: white;
+  }
+
+  .icon:hover{
+    background-color: pink;
+  }
+  
+  .icon li{
+    margin: 0;
+        color: black;
+        list-style: none;
+  }
+
+  .icon ol{
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
