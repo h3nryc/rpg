@@ -1,3 +1,6 @@
+RPG Game
+made by henry and ethan for 11SDD
+
 - [x] Player movement
 - [ ] Opponents move on map
 - [x] Combat System
