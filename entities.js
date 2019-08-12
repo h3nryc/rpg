@@ -16,8 +16,10 @@ function EntityHandler() {
           draw();
           }
           else if (type >= 100){
-            fightHandler.battle([100,100,1])
             console.log("battle");
+            fightHandler.battle([100,100,1])
+            this.places.splice(i, 1);
+            draw();
           }
         }else{
           continue;
