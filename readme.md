@@ -1,6 +1,13 @@
 RPG Game
 made by henry and ethan for 11SDD
 
+to run:
+
+```bash
+cd ~/"path to directory"/
+python -m SimpleHTTPServer
+```
+
 - [x] Player movement
 - [ ] Opponents move on map
 - [x] Combat System
