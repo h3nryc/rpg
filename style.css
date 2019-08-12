@@ -3,6 +3,9 @@ display: grid;
 grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
 grid-auto-rows: 1fr;
 }
+body{
+  background-color: #181B1B;
+}
 .grid div{
 text-align: left;
 width: 50px;

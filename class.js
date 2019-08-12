@@ -13,6 +13,8 @@ function Classes() {
     for (var i = 0; i < player.attr.length; i++) {
       player.attr[i] = newAtrr[i];
     }
+    chosen = chosen[0].toUpperCase() + chosen.slice(1);
+    $('.cClass').text('You are a '+chosen)
     player.drawStats();
   }
 

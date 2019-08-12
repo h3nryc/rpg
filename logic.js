@@ -3,6 +3,7 @@ var player;
 function preload() {
   ocean = loadImage('./assets/ocean.jpg');
   dirt = loadImage('./assets/dirt.jpg');
+  lair = loadImage('./assets/dirt.jpg')
   img = loadImage('./assets/tilesheet.png');
 }
 

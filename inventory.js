@@ -46,7 +46,7 @@ function Inventory(){
 			player.updateStat(this.items[id].attribute,true,this.items[id].byAmount)
 			this.remove(id)
 		}else{
-			alert('You can\'t use that now.')
+			alert('You can\'t use that now.');
 		}
 	}
 }
