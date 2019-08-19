@@ -42,11 +42,16 @@ function Inventory(){
 	}
 
 	this.use = function(id){
-		if ((player.attr[this.items[id].attribute] + this.items[id].byAmount) <= 100) {
+		if (player.attr[this.items[id].attribute] == 100){
+			alert('You can\'t use that now.')
+		}else if ((player.attr[this.items[id].attribute] + this.items[id].byAmount) <= 100) {
 			player.updateStat(this.items[id].attribute,true,this.items[id].byAmount)
 			this.remove(id)
-		}else{
-			alert('You can\'t use that now.')
+		}else if ((player.attr[this.items[id].attribute] + this.items[id].byAmount) > 100){
+			//player.updateStat(this.items[id].attribute,true,this.items[id].byAmount)
+			player.attr[this.items[id].attribute] = 100;
+			player.drawStats();
+			this.remove(id)
 		}
 	}
 }
