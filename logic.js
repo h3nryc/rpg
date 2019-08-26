@@ -64,15 +64,23 @@ function draw() {
           var mobX = entityHandler.places[entityInfo[2]][0];
           var mobY = entityHandler.places[entityInfo[2]][1];
           if (player.x <= mobX) {
-            entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] - 1;
+            if (map[mobX-1][mobY].canStep == false) {
+              console.log(1);
+            }else{
+              entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] - 1;
+            }
             noStroke();
             entity = color('rgb(0,255,0)')
             fill(entity);
             square(x*25+5, y*25+5, 15)
           }
-
           if (player.x >= mobX) {
-            entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] + 1;
+
+            if (map[mobX+1][mobY].canStep == false) {
+              console.log(1);
+            }else{
+              entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] + 1;
+            }
           }
 
         }
@@ -141,9 +149,15 @@ if (fightHandler.fight == false) {
         }
         draw();
       }
-    }else if (49 <= keyCode <= 57) {
-      var invenSlot = keyCode - 49;
-      inventory.use(invenSlot);
     }
 }
+try {
+  if (49 <= keyCode <= 57) {
+    var invenSlot = keyCode - 49;
+    inventory.use(invenSlot);
+  }
+} catch (e) {
+
+}
+
 }
