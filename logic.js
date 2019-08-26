@@ -70,7 +70,6 @@ function draw() {
             fill(entity);
             square(x*25+5, y*25+5, 15)
           }
-
           if (player.x >= mobX) {
             entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] + 1;
           }
@@ -141,9 +140,11 @@ if (fightHandler.fight == false) {
         }
         draw();
       }
-    }else if (49 <= keyCode <= 57) {
-      var invenSlot = keyCode - 49;
-      inventory.use(invenSlot);
     }
+}
+
+if (49 <= keyCode <= 57) {
+  var invenSlot = keyCode - 49;
+  inventory.use(invenSlot);
 }
 }
