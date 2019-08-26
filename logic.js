@@ -59,6 +59,11 @@ function draw() {
           entity = color('rgb(0,0,255)');
           fill(entity);
           square(x*25+5, y*25+5, 15);
+        }else if(entityInfo[1] == 200){
+          noStroke();
+          entity = color('rgb(255,255,51)');
+          fill(entity);
+          square(x*25+5, y*25+5, 15);
         }
         if (entityInfo[1] == 100){
           var mobX = entityHandler.places[entityInfo[2]][0];
