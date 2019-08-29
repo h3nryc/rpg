@@ -9,10 +9,12 @@ function FightHandler() {
   this.battle = function(mob){
     this.fight = true;
     this.cMobH = mob[0];
+    this.maxH = mob[0]
     this.cMobS = mob[1];
     this.cMobD = mob[2];
     $('.contr').show();
     $('.tool-tip').show();
+    var percentage = (this.cMobH / this.maxH) * 100;
     $( ".mob-health-inner" ).css("width", this.cMobH+'%');
   }
 
@@ -32,6 +34,7 @@ function FightHandler() {
         if (pStat != true) {
           this.cMobH = this.cMobH - pStat;
           if(this.cMobH <= 0){this.endFight();alert('You Win!')}
+          var percentage = (this.cMobH / this.maxH) * 100;
           $( ".mob-health-inner" ).css("width", this.cMobH+'%');
           mobAi(this.cMobD)
         }else{
@@ -40,6 +43,7 @@ function FightHandler() {
             alert("The opponent hurt itself in confusion!")
             this.cMobH = this.cMobH - 15;
             if(this.cMobH <= 0){this.endFight();alert('You Win!')}
+            var percentage = (this.cMobH / this.maxH) * 100;
             $( ".mob-health-inner" ).css("width", this.cMobH+'%');
           }
         }
@@ -49,6 +53,7 @@ function FightHandler() {
         if (pStat != true) {
           this.cMobH = this.cMobH - pStat
           if(this.cMobH <= 0){this.endFight();alert('You Win!')}
+          var percentage = (this.cMobH / this.maxH) * 100;
           $( ".mob-health-inner" ).css("width", this.cMobH+'%');
         }
       }
