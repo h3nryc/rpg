@@ -13,7 +13,7 @@ border: #363636 3px solid;
 display: inline-grid;
 }
 body{
-  background-image: url("assets/th.png");
+  background-image: url("./th.png");
 }
 .grid span{
 margin-left: 3px;
