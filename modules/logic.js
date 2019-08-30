@@ -47,7 +47,6 @@ function draw() {
       square(x*25, y*25, 25);
       default:
       }
-
       if (entityInfo[0]) {
         if (entityInfo[1] == 0) {
           noStroke();
@@ -59,13 +58,18 @@ function draw() {
           entity = color('rgb(0,0,255)');
           fill(entity);
           square(x*25+5, y*25+5, 15);
+        }else if(entityInfo[1] == 2){
+          noStroke();
+          entity = color('rgb(255,255,51)');
+          fill(entity);
+          square(x*25+5, y*25+5, 15);
         }
         if (entityInfo[1] == 100){
           var mobX = entityHandler.places[entityInfo[2]][0];
           var mobY = entityHandler.places[entityInfo[2]][1];
           if (player.x <= mobX) {
             if (map[mobX-1][mobY].canStep == false) {
-              console.log(1);
+
             }else{
               entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] - 1;
             }
@@ -77,7 +81,7 @@ function draw() {
           if (player.x >= mobX) {
 
             if (map[mobX+1][mobY].canStep == false) {
-              console.log(1);
+
             }else{
               entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] + 1;
             }
@@ -85,12 +89,10 @@ function draw() {
 
         }
         if (entityInfo[1] == 101){
-          console.log(1);
           var mobX = entityHandler.places[entityInfo[2]][0];
           var mobY = entityHandler.places[entityInfo[2]][1];
           if (player.x <= mobX) {
             if (map[mobX-1][mobY].canStep == false) {
-              console.log(1);
             }else{
               entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] - 1;
             }
@@ -102,7 +104,6 @@ function draw() {
           if (player.x >= mobX) {
 
             if (map[mobX+1][mobY].canStep == false) {
-              console.log(1);
             }else{
               entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] + 1;
             }

@@ -4,7 +4,6 @@ function Inventory(){
 	this.add = function(item){
 		this.items.push(item);
 		currentText = $('.inventory').text();
-		console.log(this.items);
 		var slotNum = this.items.length;
 		if (slotNum < 9) {
 			$( ".slot" ).eq( slotNum-1 ).addClass(item.class)
@@ -26,15 +25,12 @@ function Inventory(){
 
 	this.drawItems = function(){
 		for (var i = 0; i < this.items.length; i++) {
-				console.log(i);
-				console.log($( ".slot" ));
 				$( ".slot" ).eq( i ).addClass(this.items[i].class)
 				$( ".slot" ).eq( i ).attr('title', this.items[i].name);
 		}
 	}
 
 	this.remove = function(id){
-		console.log(1);
 		$( ".slot" ).eq( id ).removeClass(this.items[id].class)
 		$( ".slot" ).eq( id ).attr('title', "");
 		this.items.splice(id, 1);
@@ -48,6 +44,7 @@ function Inventory(){
 			player.updateStat(this.items[id].attribute,true,this.items[id].byAmount)
 			this.remove(id)
 		}else if ((player.attr[this.items[id].attribute] + this.items[id].byAmount) > 100){
+						console.log(';erwihuflksa');
 			//player.updateStat(this.items[id].attribute,true,this.items[id].byAmount)
 			player.attr[this.items[id].attribute] = 100;
 			player.drawStats();

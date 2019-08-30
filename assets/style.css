@@ -66,6 +66,13 @@ color: blue;
     background-size: contain;
     background-image: url('./assets/Potion_of_Healing.png');
   }
+  .coin{
+    z-index: 99;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    background-image: url('./assets/gold_pile.png');
+  }
   .potion-speed{
     z-index: 99;
     background-repeat: no-repeat;
