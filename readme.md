@@ -14,5 +14,5 @@ python -m SimpleHTTPServer
 - [x] Opponents can die
 - [ ] Player can die
 - [x] Weapons/Items/Special Abilities
-- [ ] Characters can be created and level up
-- [ ] A variety of monsters and or traps are available to fight
+- [x] Characters can be created and level up
+- [x] A variety of monsters and or traps are available to fight
