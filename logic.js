@@ -127,7 +127,8 @@ if (fightHandler.fight == false) {
     if(map[player.x][player.y-1].canStep == true || map[player.x][player.y-1].canStep == undefined){
       var entityInfo = entityHandler.checkPlacement(player.x,player.y-1);
       if(entityInfo[0]){
-        entityHandler.pickUp(player.x,player.y-1,entityInfo[1])
+        console.log(entityInfo);
+        entityHandler.pickUp(player.x,player.y-1,entityInfo[1],entityInfo[2])
       }
       if (player.cY-1<= 0) {
         player.cY = 0;
@@ -140,7 +141,7 @@ if (fightHandler.fight == false) {
     if(map[player.x-1][player.y].canStep == true || map[player.x-1][player.y].canStep == undefined){
       var entityInfo = entityHandler.checkPlacement(player.x-1,player.y);
       if(entityInfo[0]){
-        entityHandler.pickUp(player.x-1,player.y,entityInfo[1])
+        entityHandler.pickUp(player.x-1,player.y,entityInfo[1],entityInfo[2])
       }
       if (player.cX-1<= 0) {
         player.cX = 0;
@@ -153,7 +154,7 @@ if (fightHandler.fight == false) {
       if(map[player.x][player.y+1].canStep == true || map[player.x][player.y+1].canStep == undefined){
         var entityInfo = entityHandler.checkPlacement(player.x,player.y+1);
         if(entityInfo[0]){
-          entityHandler.pickUp(player.x,player.y+1,entityInfo[1])
+          entityHandler.pickUp(player.x,player.y+1,entityInfo[1],entityInfo[2])
         }
         if (player.cY+1 >= 30) {
           player.cY = 30;
@@ -166,7 +167,7 @@ if (fightHandler.fight == false) {
       if(map[player.x+1][player.y].canStep == true || map[player.x+1][player.y].canStep == undefined){
         var entityInfo = entityHandler.checkPlacement(player.x+1,player.y);
         if(entityInfo[0]){
-          entityHandler.pickUp(player.x+1,player.y,entityInfo[1])
+          entityHandler.pickUp(player.x+1,player.y,entityInfo[1],entityInfo[2])
         }
         if (player.cX+1 >= 30) {
           player.cX = 30;

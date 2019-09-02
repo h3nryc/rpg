@@ -4,7 +4,7 @@ function EntityHandler() {
   ];
   this.places = [[8,8,0],[12,12,0],[9,10,0],[10,10,1],[15,15,100],[20,20,100],[15,17,101],[5,6,2]];
 
-  this.pickUp = function(x,y,type){
+  this.pickUp = function(x,y,type,id){
     for (var i = 0; i < this.places.length; i++) {
       if (this.places[i][0] == x) {
         if (this.places[i][1] == y) {
@@ -14,8 +14,9 @@ function EntityHandler() {
           draw();
           }
           else if (type >= 100 && type <= 150){
-            console.log("battle");
-            fightHandler.battle([100,100,1])
+            var obj = this.dic.find(o => o.id === type);
+            console.log(obj.health);
+            fightHandler.battle([obj.health,obj.speed,obj.difficulty])
             this.places.splice(i, 1);
             draw();
           }
