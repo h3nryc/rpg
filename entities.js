@@ -1,8 +1,40 @@
 function EntityHandler() {
+  function randomNum(x, y) {
+    output = Math.floor(Math.random() * (x - y) + y);
+    return output;
+  }
   this.dic = [{id:0, name: "Potion of Healing", attribute: 0,byAmount:30,class:"potion-healing"},
   {id:1, name: "Potion of Speed", attribute: 1,byAmount:25,class:"potion-speed"},{id:100, name: "Slime", class:"enemy", speed: "20", health: "10", difficulty: "1"},{id:101, name: "Witch", class:"enemy", speed:"80", health: "200", difficulty: "5"},{id:90, attribute: 7,byAmount:1,name: "Coin", class:"coin", value:"5"}
   ];
-  this.places = [[8,8,0],[12,12,0],[9,10,0],[10,10,1],[15,15,100],[20,20,100],[15,17,101],[12,13,90]];
+
+  this.places = [];
+  //append potions and monsters to places
+  var healthpotCount = randomNum(2, 5);
+  for (var c = 0; c <= healthpotCount; c++) {
+    this.places.push([randomNum(5,25),randomNum(5,25),0]);
+  };
+
+  var speedpotCount = randomNum(2, 5);
+  for (var c = 0; c <= speedpotCount; c++) {
+    this.places.push([randomNum(5,25),randomNum(5,25),1]);
+  };
+
+  var slimeCount = randomNum(5, 6);
+  for (var c = 0; c <= slimeCount; c++) {
+    this.places.push([randomNum(5,25),randomNum(5,25),100]);
+  };
+
+  var witchCount = randomNum(2, 4);
+  for (var c = 0; c <= witchCount; c++) {
+    this.places.push([randomNum(5,25),randomNum(5,25),101]);
+  };
+
+  var coinCount = randomNum(7, 10);
+  for (var c = 0; c <= coinCount; c++) {
+    this.places.push([randomNum(5,25),randomNum(5,25),90]);
+  };
+
+
 
   this.pickUp = function(x,y,type){
     for (var i = 0; i < this.places.length; i++) {
