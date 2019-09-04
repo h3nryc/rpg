@@ -4,6 +4,12 @@ function preload() {
   ocean = loadImage('./assets/ocean.jpg');
   dirt = loadImage('./assets/dirt.jpg');
   img = loadImage('./assets/tilesheet.png');
+  hpPot = loadImage('./assets/sprites/UNUSED/potions/potion_puce.png')
+  spdPot = loadImage('./assets/sprites/UNUSED/potions/potion_sky_blue.png')
+  coinPile = loadImage('./assets/gold_pile.png')
+  player = loadImage('./assets/sprites/dc-mon/human.png')
+  slime = loadImage('./assets/sprites/dc-mon/azure_jelly.png')
+  witch = loadImage('./assets/sprites/dc-mon/wizard.png')
 }
 
 function setup() {
@@ -50,21 +56,21 @@ function draw() {
 
       if (entityInfo[0]) {
         if (entityInfo[1] == 0) {
-          noStroke();
-          entity = color('rgb(255,0,0)');
-          fill(entity);
-          square(x*25+5, y*25+5, 15);
+          // noStroke();
+          // entity = color('rgb(255,0,0)');
+          // fill(entity);
+          image(hpPot, x*25+5, y*25+5, 15);
         }else if(entityInfo[1] == 1){
-          noStroke();
-          entity = color('rgb(0,0,255)');
-          fill(entity);
-          square(x*25+5, y*25+5, 15);
+          // noStroke();
+          // entity = color('rgb(0,0,255)');
+          // fill(entity);
+          image(spdPot, x*25+5, y*25+5, 15);
         }else if(entityInfo[1] == 2){
-          console.log(69);
-          noStroke();
-          entity = color('rgb(255,255,51)');
-          fill(entity);
-          square(x*25+5, y*25+5, 15);
+          console.log('coin drawn');
+          // noStroke();
+          // entity = color('rgb(255,255,51)');
+          // fill(entity);
+          image(coinPile, x*25+5, y*25+5, 15);
         }
         if (entityInfo[1] == 100){
           var mobX = entityHandler.places[entityInfo[2]][0];
@@ -75,10 +81,10 @@ function draw() {
             }else{
               entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] - 1;
             }
-            noStroke();
-            entity = color('rgb(0,255,0)')
-            fill(entity);
-            square(x*25+5, y*25+5, 15)
+            // noStroke();
+            // entity = color('rgb(0,255,0)')
+            // fill(entity);
+            image(slime, x*25+5, y*25+5, 15)
           }
           if (player.x >= mobX) {
 
@@ -100,10 +106,10 @@ function draw() {
             }else{
               entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] - 1;
             }
-            noStroke();
-            entity = color('rgb(255,0,255)')
-            fill(entity);
-            square(x*25+5, y*25+5, 15)
+            // noStroke();
+            // entity = color('rgb(255,0,255)')
+            // fill(entity);
+            image(witch, x*25+5, y*25+5, 15)
           }
           if (player.x >= mobX) {
 
