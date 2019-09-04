@@ -59,7 +59,7 @@ function draw() {
           entity = color('rgb(0,0,255)');
           fill(entity);
           square(x*25+5, y*25+5, 15);
-        }else if(entityInfo[1] == 90){
+        }else if(entityInfo[1] == 2){
           console.log(69);
           noStroke();
           entity = color('rgb(255,255,51)');
