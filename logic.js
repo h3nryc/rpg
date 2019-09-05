@@ -52,6 +52,10 @@ function draw() {
       c = color('rgb(241, 196, 15)');
       fill(c);
       square(x*25, y*25, 25);
+      case 'wall':
+      c = color('rgb(0, 0, 0)');
+      fill(c);
+      square(x*25, y*25, 25);
       default:
       }
 

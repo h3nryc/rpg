@@ -12,6 +12,8 @@ with open("map.txt") as f:
 		 		square += '{type: \'ocean\', canStep: false}'
 		 	elif tile == "d":
 		 		square += '{type: \'dirt\'}'
+			elif tile == "w":
+		 		square += '{type: \'wall\', canStep: false}'
 		 	elif tile == "g":
 		 		square += '{type: \'grass\'}'
 		 	elif tile == "x":
