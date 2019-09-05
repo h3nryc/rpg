@@ -38,8 +38,8 @@ function draw() {
       noStroke();
       switch(cSquare.type) {
         case 'ocean':
-      //  image(ocean, x*25, y*25, 25,25);
-      image(pit,[sx=x*25],[sy=y*25],[sWidth=25],[sHeight=25],[dx=64],[dy=352],[30],[30])
+      image(ocean, x*25, y*25, 25,25);
+      image([sx=x*25],[sy=y*25],[sWidth=25],[sHeight=25],[dx=64],[dy=352],[30],[30])
           break;
         case 'grass':
           //image(grass, x*25, y*25, 25,25);
