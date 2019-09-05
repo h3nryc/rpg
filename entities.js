@@ -4,7 +4,7 @@ function EntityHandler() {
     return output;
   }
   this.dic = [{id:0, name: "Potion of Healing", attribute: 0,byAmount:30,class:"potion-healing"},
-  {id:1, name: "Potion of Speed", attribute: 1,byAmount:25,class:"potion-speed"},{id:2, attribute: 7,byAmount:1,name: "Coin", class:"coin", value:"5"},{id:100, name: "Slime", class:"enemy", speed: "20", health: "10", difficulty: "1"},{id:101, name: "Witch", class:"enemy", speed:"80", health: "200", difficulty: "5"}
+  {id:1, name: "Potion of Speed", attribute: 1,byAmount:25,class:"potion-speed"},{id:2, attribute: 5,byAmount:5,name: "Coin", class:"coin", value:"5"},{id:100, name: "Slime", class:"enemy", speed: "20", health: "10", difficulty: "1"},{id:101, name: "Witch", class:"enemy", speed:"80", health: "200", difficulty: "5"}
   ];
 
   this.places = [];
