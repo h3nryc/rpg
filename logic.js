@@ -10,6 +10,7 @@ function preload() {
   player = loadImage('./assets/sprites/dc-mon/human.png')
   slime = loadImage('./assets/sprites/dc-mon/azure_jelly.png')
   witch = loadImage('./assets/sprites/dc-mon/wizard.png')
+  pit = loadImage('./assets/sprites/dc-dngn/dngn_unseen.png')
 }
 
 function setup() {
@@ -38,7 +39,7 @@ function draw() {
       switch(cSquare.type) {
         case 'ocean':
       //  image(ocean, x*25, y*25, 25,25);
-      image(img,[sx=x*25],[sy=y*25],[sWidth=25],[sHeight=25],[dx=64],[dy=352],[30],[30])
+      image(pit,[sx=x*25],[sy=y*25],[sWidth=25],[sHeight=25],[dx=64],[dy=352],[30],[30])
           break;
         case 'grass':
           //image(grass, x*25, y*25, 25,25);
@@ -66,7 +67,6 @@ function draw() {
           // fill(entity);
           image(spdPot, x*25+5, y*25+5, 15);
         }else if(entityInfo[1] == 2){
-          console.log('coin drawn');
           // noStroke();
           // entity = color('rgb(255,255,51)');
           // fill(entity);

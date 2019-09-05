@@ -25,7 +25,7 @@ submissions:
 Possible people credit
     Commit several patches:
     * patch 2838771 by camedo:  add potions of brilliance/agility
-    * patch 2849505 by weyrava: make submerged monsters use the correct colour
+    * patch 2849255 by weyrava: make submerged monsters use the correct colour
     * patch 2857771 by caotto:  another Feawn update
     * BR 2841651 by bookofjude: allow Merfolk to control-tele into deep water
 
