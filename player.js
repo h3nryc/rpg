@@ -27,6 +27,12 @@ function Player(x,y) {
       this.attr[id] = this.attr[id] + amount;
     }else{
       this.attr[id] = this.attr[id] - amount;
+      if (id == 0) {
+        if (this.attr[id] <= 0) {
+          alert('YOU HAVE DIED!')
+          location.reload();
+        }
+      }
     }
     this.drawStats();
   }
