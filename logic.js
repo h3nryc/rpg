@@ -11,6 +11,15 @@ function preload() {
   slime = loadImage('./assets/sprites/dc-mon/azure_jelly.png')
   witch = loadImage('./assets/sprites/dc-mon/wizard.png')
   pit = loadImage('./assets/sprites/dc-dngn/dngn_unseen.png')
+  if (localStorage.getItem('r') == null){
+    localStorage.setItem('r', '255');
+  }
+  if (localStorage.getItem('g') == null){
+    localStorage.setItem('g', '255');
+  }
+  if (localStorage.getItem('b') == null){
+    localStorage.setItem('b', '255');
+  }
 }
 
 function setup() {
@@ -38,8 +47,8 @@ function draw() {
       noStroke();
       switch(cSquare.type) {
         case 'ocean':
-      image(ocean, x*25, y*25, 25,25);
-      image([sx=x*25],[sy=y*25],[sWidth=25],[sHeight=25],[dx=64],[dy=352],[30],[30])
+       image(ocean, x*25, y*25, 25,25);
+      //image(pit, [sx=x*25],[sy=y*25],[sWidth=25],[sHeight=25],[dx=64],[dy=352],[30],[30])
           break;
         case 'grass':
           //image(grass, x*25, y*25, 25,25);
@@ -50,6 +59,10 @@ function draw() {
         break;
       case 'goal':
       c = color('rgb(241, 196, 15)');
+      fill(c);
+      square(x*25, y*25, 25);
+      case 'wall':
+      c = color('rgb(0, 0, 0)');
       fill(c);
       square(x*25, y*25, 25);
       default:
@@ -77,7 +90,7 @@ function draw() {
           var mobY = entityHandler.places[entityInfo[2]][1];
           if (player.x <= mobX) {
             if (map[mobX-1][mobY].canStep == false) {
-              console.log(1);
+
             }else{
               entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] - 1;
             }
