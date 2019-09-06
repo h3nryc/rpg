@@ -81,7 +81,7 @@ function draw() {
           var mobY = entityHandler.places[entityInfo[2]][1];
           if (player.x <= mobX) {
             if (map[mobX-1][mobY].canStep == false) {
-              console.log(1);
+
             }else{
               entityHandler.places[entityInfo[2]][0] = entityHandler.places[entityInfo[2]][0] - 1;
             }
