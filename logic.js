@@ -32,6 +32,14 @@ function setup() {
   inventory = new Inventory();
   fightHandler = new FightHandler();
 
+  if (localStorage.getItem('playerStat') == null) {
+    var item = JSON.stringify([100,50,50,50,50,0])
+    localStorage.setItem('playerStat', item);
+    player.updateSavedStats();
+  }else{
+    player.updateSavedStats();
+  }
+
 }
 
 function draw() {

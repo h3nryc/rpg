@@ -13,28 +13,83 @@ function EntityHandler() {
   //append potions and monsters to places
   var healthpotCount = randomNum(2, 5);
   for (var c = 0; c <= healthpotCount; c++) {
-    console.log(cMap);
-    this.places.push([randomNum(5,25),randomNum(5,25),0]);
+    var x = randomNum(5,25);
+    var y = randomNum(5,25);
+    var flag = true;
+      if (cMap[x][y].canStep == undefined) {
+        this.places.push([x,y,0]);
+      }else {
+        var x = randomNum(5,25);
+        var y = randomNum(5,25);
+        if (cMap[x][y].canStep == undefined) {
+          this.places.push([x,y,0]);
+        }
+      }
   };
 
   var speedpotCount = randomNum(2, 5);
   for (var c = 0; c <= speedpotCount; c++) {
-    this.places.push([randomNum(5,25),randomNum(5,25),1]);
+    var x = randomNum(5,25);
+    var y = randomNum(5,25);
+    var flag = true;
+      if (cMap[x][y].canStep == undefined) {
+        this.places.push([x,y,1]);
+      }else {
+        var x = randomNum(5,25);
+        var y = randomNum(5,25);
+        if (cMap[x][y].canStep == undefined) {
+          this.places.push([x,y,1]);
+        }
+      }
   };
+
 
   var slimeCount = randomNum(5, 6);
   for (var c = 0; c <= slimeCount; c++) {
-    this.places.push([randomNum(5,25),randomNum(5,25),100]);
+    var x = randomNum(5,25);
+    var y = randomNum(5,25);
+    var flag = true;
+      if (cMap[x][y].canStep == undefined) {
+        this.places.push([x,y,100]);
+      }else {
+        var x = randomNum(5,25);
+        var y = randomNum(5,25);
+        if (cMap[x][y].canStep == undefined) {
+          this.places.push([x,y,100]);
+        }
+      }
   };
 
   var witchCount = randomNum(2, 4);
   for (var c = 0; c <= witchCount; c++) {
-    this.places.push([randomNum(5,25),randomNum(5,25),101]);
+    var x = randomNum(5,25);
+    var y = randomNum(5,25);
+    var flag = true;
+      if (cMap[x][y].canStep == undefined) {
+        this.places.push([x,y,101]);
+      }else {
+        var x = randomNum(5,25);
+        var y = randomNum(5,25);
+        if (cMap[x][y].canStep == undefined) {
+          this.places.push([x,y,101]);
+        }
+      }
   };
 
   var coinCount = randomNum(7, 10);
   for (var c = 0; c <= coinCount; c++) {
-    this.places.push([randomNum(5,25),randomNum(5,25),2]);
+    var x = randomNum(5,25);
+    var y = randomNum(5,25);
+    var flag = true;
+      if (cMap[x][y].canStep == undefined) {
+        this.places.push([x,y,2]);
+      }else {
+        var x = randomNum(5,25);
+        var y = randomNum(5,25);
+        if (cMap[x][y].canStep == undefined) {
+          this.places.push([x,y,2]);
+        }
+      }
   };
 
 
