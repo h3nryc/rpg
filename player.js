@@ -6,11 +6,36 @@ function Player(x,y) {
   this.x = 0;
   this.y = 0;
 
+  this.changeColor = function () {
+    var r = prompt('select r value');
+    if (0 <= r <= 255){
+      localStorage.setItem("r", r);
+      console.log("worked");
+    }
+    else{
+      console.log("didnt work");
+    }
+    var g = prompt('select g value');
+    if (0 <= g <= 255){
+      localStorage.setItem("g", g);
+    }
+    else{
+      console.log("didnt work");
+    }
+    var b = prompt('select b value');
+    if (0 <= b <= 255){
+      localStorage.setItem("b", b);
+    }
+    else{
+      console.log("didnt work");
+    }
+  }
+
   this.show = function(){
     this.x = 5+this.cX;
     this.y = 5+this.cY;
     noStroke();
-    c = color('rgb(255,255,255)');
+    c = color('rgb('+localStorage.getItem("r")+','+localStorage.getItem("g")+','+localStorage.getItem("b")+')');
     fill(c);
     square(5*25+5, 5*25+5, 15);
   };

@@ -11,6 +11,15 @@ function preload() {
   slime = loadImage('./assets/sprites/dc-mon/azure_jelly.png')
   witch = loadImage('./assets/sprites/dc-mon/wizard.png')
   pit = loadImage('./assets/sprites/dc-dngn/dngn_unseen.png')
+  if (localStorage.getItem('r') == null){
+    localStorage.setItem('r', '255');
+  }
+  if (localStorage.getItem('g') == null){
+    localStorage.setItem('g', '255');
+  }
+  if (localStorage.getItem('b') == null){
+    localStorage.setItem('b', '255');
+  }
 }
 
 function setup() {
