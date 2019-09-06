@@ -1,15 +1,15 @@
 <html>
   <head>
-  	<script src="./lib/jquery-3.4.1.min.js"></script>
-    <script src="./lib/p5.min.js"></script>
-    <script src="./modules/logic.js"></script>
-    <script src="./modules/player.js"></script>
-    <script src="./modules/inventory.js"></script>
-    <script src="./modules/mapGen.js"></script>
-    <script src="./modules/entities.js"></script>
-    <script src="./modules/fight.js"></script>
-    <script src="./modules/class.js"></script>
-    <link rel="stylesheet" href="./assets/style.css">
+  	<script src="./jquery-3.4.1.min.js"></script>
+    <script src="./p5.min.js"></script>
+    <script src="./logic.js"></script>
+    <script src="./player.js"></script>
+    <script src="./inventory.js"></script>
+    <script src="./mapGen.js"></script>
+    <script src="./entities.js"></script>
+    <script src="./fight.js"></script>
+    <script src="./class.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -30,7 +30,7 @@
       </ul>
 
       <p>You are a Warrior</p>
-      <a onclick="$('.class-out').show(); fightHandler.fight = true;" href="#">Click here to change class (Will reset progress)</a>
+      <a onclick="$('.class-out').show(); fightHandler.fight = true;" href="#">Change class (Will reset progress)</a>
     </span>
 
     <div id="parent"></div>
@@ -76,7 +76,7 @@
     </span>
   </span>
   <div class="bottom">
-          <p class="tool-tip"style="margin-left: 12px; float: left; width: 150px;">If your opponent has a higher speed your defence will not work</p>
+          <p class="tool-tip"style="margin-left: 12px; float: left; width: 125px;">If your opponent has a higher speed your defence will not work</p>
     <div class="contr">
 
       <div class="fight-buts">
