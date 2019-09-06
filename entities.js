@@ -43,6 +43,7 @@ function EntityHandler() {
       }
   };
 
+
   var slimeCount = randomNum(5, 6);
   for (var c = 0; c <= slimeCount; c++) {
     var x = randomNum(5,25);

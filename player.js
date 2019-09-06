@@ -15,6 +15,17 @@ function Player(x,y) {
     square(5*25+5, 5*25+5, 15);
   };
 
+  this.updateSavedStats = function () {
+    var stats = JSON.parse(localStorage.getItem('playerStat'))
+    this.attr = stats;
+    this.drawStats();
+  }
+  this.saveStat = function () {
+    var item = JSON.stringify(this.attr)
+    localStorage.setItem('playerStat', item);
+    player.updateSavedStats();
+  }
+
   this.drawStats = function() {
     for (var i = 0; i < this.attr.length; i++) {
       $( "li" ).eq( i ).find( ".prog-bar-inner" ).css("width", this.attr[i]+'%');
